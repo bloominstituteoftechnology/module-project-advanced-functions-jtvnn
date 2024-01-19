@@ -142,8 +142,16 @@
     // ❗ Notes:
     // 🧠 This could be solved by using filter to make an array of odd integers, and then using forEach to add them up.
     // 🧠 Or you could opt for solving everything with a single forEach which is the recommended approach (saves a loop).
-    const sumOddInts = () => {
-
+    const sumOddInts = (integers) => {
+      let result = [];
+      let sum = 0;
+      integers.forEach((integer) => {
+        if (integer % 2 !== 0) {
+          sum += integer;
+          result.push(integer)
+        }
+      })
+      return [sum, result];
     }
 
     // 👉 CHALLENGE 8
@@ -157,8 +165,8 @@
     // checkInts(2, 6) // should return ["even", "even"]
     // ❗ Notes:
     // 🧠 Solve this problem using rest parameters and map.
-    const checkInts = () => {
-
+    const checkInts = ( ...args) => {
+      
     }
 
     // 🧪 TESTS, do not work below this line
