@@ -121,9 +121,13 @@
     // ❗ Notes:
     // 🧠 Solve this challenge using the filter method of the learners array.
     const getJavaScriptLoversFilter = (learners) => {
-      let filtered = (learner) => {
-        
-      }
+      let filtered = learners.filter((learner) => {
+        return learner.lovesJS === true || learner.lovesJS === 1;
+      })   
+      if(!filtered.length) {
+        return "no JS lovers here!";
+      }     
+      return filtered;
     }
 
     // 👉 CHALLENGE 7
